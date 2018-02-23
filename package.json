@@ -1,0 +1,29 @@
+{
+  "name": "sprinterbot",
+  "version": "0.0.1",
+  "description": "Bot Telegram Transporte Alternativo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renatoassis/sprinterbot.git"
+  },
+  "keywords": [
+    "Bot",
+    "Telegram"
+  ],
+  "author": "Renato Assis <renato@linuxmail.org>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renatoassis/sprinterbot/issues"
+  },
+  "homepage": "https://github.com/renatoassis/sprinterbot#readme",
+  "dependencies": {
+    "@types/dotenv": "^4.0.2",
+    "@types/twit": "^2.2.11",
+    "dotenv": "^5.0.0",
+    "twit": "^2.2.9"
+  }
+}
