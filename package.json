@@ -24,6 +24,7 @@
     "@types/dotenv": "^4.0.2",
     "@types/twit": "^2.2.11",
     "dotenv": "^5.0.0",
+    "node-telegram-bot-api": "^0.30.0",
     "twit": "^2.2.9"
   }
 }
