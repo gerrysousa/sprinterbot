@@ -3,13 +3,12 @@
       "target": "es6",
       "module": "commonjs",
       "outDir": "dist",
-      "sourceMap": true
+      "sourceMap": false
     },
-    "files": [
-      
-    ],
+    
     "include": [
-      "src/**/*.ts"
+      "src/**/*.ts",
+      
     ],
     "exclude": [
       "node_modules"
