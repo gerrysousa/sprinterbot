@@ -1,8 +1,6 @@
 import * as admin from "firebase-admin";
-
 export class Firebase {
   private fb: any;
-  private;
   constructor() {
     this.fb = admin.initializeApp({
       credential: admin.credential.cert({
@@ -12,10 +10,6 @@ export class Firebase {
       }),
       databaseURL: process.env.FIREBASE_DATABASE_URL
     });
-  }
-
-  isTweetExist(tweet: any): boolean {
-    return false;
   }
 
   set(tweet: any) {
@@ -28,5 +22,25 @@ export class Firebase {
         status_url: tweet.status_url
       });
   }
-  get() {}
+  getById(id) {
+    let leadsRef = this.fb.database().ref("tweets");
+    return leadsRef
+      .orderByChild("id")
+      .equalTo(id)
+      .once("child_added")
+      .then(snapshot => {
+        return snapshot.val();
+      });
+  }
+  getAllById() {
+    let v = [];
+    let tweetsRef = this.fb.database().ref("tweets");
+    return tweetsRef.once("value").then(function(snapshot) {
+      snapshot.forEach(function(childSnapshot) {
+        v.push(childSnapshot.val().id);
+      });
+      
+      return v;
+    });
+  }
 }

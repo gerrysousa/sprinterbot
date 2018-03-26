@@ -28,10 +28,10 @@
     "dotenv": "^5.0.0",
     "firebase-admin": "^5.9.0",
     "moment": "^2.20.1",
+    "rxjs": "^5.5.7",
     "telegraf": "^3.18.0",
-    "twit": "^2.2.9"
-  },
-  "devDependencies": {
+    "twit": "^2.2.9",
     "typescript": "^2.7.2"
   }
+  
 }
