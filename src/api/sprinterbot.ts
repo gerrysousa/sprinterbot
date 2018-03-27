@@ -9,11 +9,12 @@ export class Telegram {
   constructor(firebase: Firebase) {
     this.bot = new this.Telegraf(this.token);
     this.firebase = firebase;
-    this.setData();
+    
   }
-  setData() {
-    this.firebase.getAllById().then(all => {
+  init() {
+      this.firebase.getAllById().then(all => {
       this.tweet_ids = Array.from(all);
+      this.run()
     });
   }
 

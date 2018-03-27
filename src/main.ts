@@ -22,4 +22,6 @@ tweetSub.subscribe(tweet => {
     status_url: `https://twitter.com/${tweet.user.screen_name}/status/${tweet.id}`
   });
 });
-telegram.run();
+    
+
+telegram.init();
